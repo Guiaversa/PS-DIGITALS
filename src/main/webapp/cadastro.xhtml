@@ -29,24 +29,28 @@
 					</div>
 					<div class="p-field">
 						<label for="cpf">CPF Number</label>
-						<p:inputText id="cpf" type="numeric" value="#{userBean.user.cpf}"
-							required="true" requiredMessage="O campo CPF é obrigatório"
-							validatorMessage="A CPF deve ter pelo menos 14 Digitos">
+						<p:inputMask id="cpf"  value="#{userBean.user.cpf}"
+							required="true" 
+							mask="999.999.999-99"
+							requiredMessage="O campo CPF é obrigatório"
 						>
-							<f:validateLength minimum="11" />
-							<f:validateLength maximum="14" />
-						</p:inputText>
+						
+						</p:inputMask>
 					</div>
 					
 					<div class="p-field">
 						<label for="rg">Identification Card RG</label>
-						<p:inputText id="rg" value="#{userBean.user.rg}" feedback="true"
-							required="true" requiredMessage="O campo RG é obrigatório"
-							validatorMessage="O RG deve ter 8 Digitos">
+						<p:inputMask 
+							id="rg" 
+							value="#{userBean.user.rg}" 
+							feedback="true"
+							mask="99.999.999" 
+							required="true"
+							requiredMessage="O campo RG é obrigatório"
+							
 						>
-						<f:validateLength minimum="8" />
 
-						</p:inputText>
+						</p:inputMask>
 					</div>
 					<div class="p-field">
 						<label for="digitoRg">Digit RG</label>
